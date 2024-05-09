@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-imagem">
+            <img src="assets/img//undraw_shopping_re_3wst.svg" alt="">
+        </div>
+        <div class="formulario">
+            <form action="#" id="formulario-login">
+                <div class="cabecalho-formulario">
+                    <div class="titulo">
+                        <h1>Login</h1>
+                    </div>
+                    <div class="botao-login">
+                        <button type="button" id="alternar-cadastro">Cadastrar-se</button>
+                    </div>
+                </div>
+
+                <div class="grupo-input">
+                    <div class="caixa-input">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="caixa-input">
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+                </div>
+
+                <div class="botao-continuar">
+                    <button type="submit">Entrar</button>
+                </div>
+            </form>
+
+            <form action="#" id="formulario-cadastro" style="display: none;">
+                <div class="cabecalho-formulario">
+                    <div class="titulo">
+                        <h1>Cadastre-se</h1>
+                    </div>
+                    <div class="botao-login">
+                        <button type="button" id="alternar-login">Login</button>
+                    </div>
+                </div>
+
+                <div class="grupo-input">
+                    <div class="caixa-input">
+                        <label for="nomeCompleto">Nome Completo</label>
+                        <input id="nomeCompleto" type="text" name="nomeCompleto" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <div class="caixa-input">
+                        <label for="email">E-mail</label>
+                        <input id="email" type="email" name="email" placeholder="Digite seu e-mail" required>
+                    </div>
+
+                    <div class="caixa-input">
+                        <label for="numero">Celular</label>
+                        <input id="numero" type="tel" name="numero" placeholder="(xx) xxxx-xxxx" required>
+                    </div>
+
+                    <div class="caixa-input">
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="password" name="senha" placeholder="Digite sua senha" required>
+                    </div>
+
+                    <div class="caixa-input">
+                        <label for="confirmarSenha">Confirme sua Senha</label>
+                        <input id="confirmarSenha" type="password" name="confirmarSenha" placeholder="Digite sua senha novamente" required>
+                    </div>
+                </div>
+
+                <div class="inputs-genero">
+                    <div class="titulo-genero">
+                        <h6>Gênero</h6>
+                    </div>
+
+                    <div class="grupo-genero">
+                        <div class="input-genero">
+                            <input id="feminino" type="radio" name="genero">
+                            <label for="feminino">Feminino</label>
+                        </div>
+
+                        <div class="input-genero">
+                            <input id="masculino" type="radio" name="genero">
+                            <label for="masculino">Masculino</label>
+                        </div>
+
+                        <div class="input-genero">
+                            <input id="outros" type="radio" name="genero">
+                            <label for="outros">Outros</label>
+                        </div>
+
+                        <div class="input-genero">
+                            <input id="prefiroNaoDizer" type="radio" name="genero">
+                            <label for="prefiroNaoDizer">Prefiro não dizer</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="botao-continuar">
+                    <button type="submit">Continuar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Função para alternar entre os formulários de login e cadastro
+        document.getElementById('alternar-cadastro').addEventListener('click', function() {
+            document.getElementById('formulario-login').style.display = 'none';
+            document.getElementById('formulario-cadastro').style.display = 'block';
+        });
+
+        document.getElementById('alternar-login').addEventListener('click', function() {
+            document.getElementById('formulario-login').style.display = 'block';
+            document.getElementById('formulario-cadastro').style.display = 'none';
+        });
+    </script>
+</body>
+
+</html>
